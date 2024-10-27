@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Monika Reháková">
+    <title>Motionpedia</title>
+    <link rel="stylesheet" href="../styles/style_information.css">
+</head>
+
+<body>
+    <header>
+        <div class="home"> <a href="../index.html"> <img src="../images/logo-icons/motionpedia_title.gif" alt="Logo"
+            style="height: 6%; width: 9%;"> </a></div>
+
+        <div id="menu" class="dropdown">
+            <a href="javascript:void(0)" class="closeButton" onclick="closeMenu()">&times;</a>
+            <div class="dropdown-content">
+                <p> <a href="../index.html">Domov</a></p>
+                <p> <a href="aboutmotiondesign.html">Čo je to motion dizajn?</a></p>
+                <p> <a href="history.html">História</a></p>
+                <p> <a href="instructions.html">Tvorba animácie</a></p>
+                <p> <a href="introduction.html">O Motionpedii</a></p>
+            </div>
+        </div>
+        <div class="linesMenu" onclick="openMenu()">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </header>
+
+    <section class="intro"> Veľmi ma teší, že sa chceš o motion dizajne dozvedieť viac! Ak ťa zaujíma viac informácií o tom, čo to
+        vlastne motion dizajn je a kde sa využíva, v prvej časti sa dozvieš práve to. 
+        Ak ťa naopak zaujíma niečo viac o histórii motion dizajnu, druhá časť je práve pre teba.
+        A ak si sem neprišiel kvôli teórii, môžeš sa v tretej časti pozrieť na to, ako sa animácia za použitia motion dizajnu dá vytvoriť.
+    </section>
+
+    <section class="history_instructions">
+        <figure class="about">
+            <a href="aboutmotiondesign.html"><img src="../images/logo-icons/about.gif" alt="aboutLogo" class="responsive"></a>
+        </figure>
+        <figure class="hist">
+            <a href="history.html"><img src="../images/logo-icons/history.gif" alt="HistoryLogo" class="responsive"></a>
+        </figure>
+        <figure class="todo">
+            <a href="instructions.html"><img src="../images/logo-icons/todo.gif" alt="insLogo" class="responsive"></a>
+        </figure>
+    </section>
+
+    <script src="../scripts/main.js"></script>
+
+</body>
+
+</html>

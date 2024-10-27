@@ -1,0 +1,6 @@
+@import url("style_general.css");
+@import url("style_history_content.css");
+
+.navigation_content ul li {
+    margin: 20px 25px 20px 25px;
+}

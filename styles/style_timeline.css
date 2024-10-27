@@ -1,0 +1,466 @@
+@import url("style_general.css");
+
+.intro {
+  margin: 100px;
+  text-align: center;
+  
+}
+
+.intro p {
+  color: rgb(77, 77, 77);
+  padding: 30px 100px 0px 100px;
+}
+
+/* Inspired by https://freefrontend.com/css-timelines/*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Changes main line of the timeline */
+div.timeline {
+  position: relative;
+  width: 100%;
+  max-width: 1140px;
+  margin: 80px auto 20px auto;
+  padding: 15px 0px;
+}
+
+div.timeline::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background: black;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+
+/* Changes the container */
+.container {
+  padding: 15px 30px;
+  position: relative;
+  width: 50%;
+}
+
+.container .content {
+  transition: transform 0.25s ease;
+}
+
+.container .content:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.container.left {
+  left: 0;
+}
+
+.container.right {
+  left: 50%;
+}
+
+/* Changes the circle */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: calc(50% - 8px);
+  right: -8px;
+  background: white;
+  border: 2px solid black;
+  border-radius: 16px;
+  z-index: 1;
+}
+
+/* Changes the circle right */
+.container.right::after {
+  left: -8px;
+}
+
+/* Changes lines by the circle */
+.container::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  top: calc(50% - 1px);
+  right: 8px;
+  background: black;
+  z-index: 1;
+}
+
+/* Changes lines by the circle right */
+.container.right::before {
+  left: 8px;
+}
+
+/* Changes the date */
+.container .date {
+  position: absolute;
+  display: inline-block;
+  top: calc(50% - 8px);
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  letter-spacing: 1px;
+  z-index: 1;
+}
+
+/* Changes the date left */
+.container.left .date {
+  right: -60px;
+}
+
+/* Changes the date right */
+.container.right .date {
+  left: -60px;
+}
+
+/* Changes content of the container */
+.container .content {
+  padding: 30px 30px 30px 30px;
+  border: 2px solid black;
+  position: relative;
+  text-align: center;
+}
+
+.container.left .content {
+  padding: 30px 30px 30px 30px;
+  margin-right: 40px;
+}
+
+.container.right .content {
+  padding: 30px 30px 30px 30px;
+  margin-left: 40px;
+}
+
+.container .content p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: black;
+}
+
+/* Changes button in the container */
+button {
+  background-color: rgb(255, 128, 44);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-family: 'Montserrat', 'Verdana', sans-serif;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+button .a,
+button a:link,
+button a:visited {
+  text-decoration: none;
+}
+
+/* Changes color of the button after hovering and clicking */
+button:hover {
+  background-color: rgb(77, 77, 77);
+  color: white;
+}
+
+button:active {
+  background-color: black;
+  transform: translateY(4px);
+  color: white;
+}
+
+/* Changes bottom navigation bar */
+.bottom-nav {
+  overflow: hidden;
+  position: relative;
+  background-color: rgb(255, 128, 44);
+  bottom: 0;
+  width: 100%;
+}
+
+.bottom-nav a {
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+  float: left;
+  display: block;
+  padding: 5px 10px 5px 10px;
+  font-size: 15px;
+}
+
+.bottom-nav a:hover {
+  background-color: rgb(77, 77, 77);
+  color: white;
+}
+
+.bottom-nav a.active {
+  background-color: black;
+  color: white;
+}
+
+/* Responsive design */
+@media screen and (max-width: 650px) {
+
+  .intro {
+    margin: 60px 40px 10px 40px;
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .intro p {
+    padding: 0px;
+  }
+
+  div.timeline::after {
+    left: 90px;
+  }
+
+  .container {
+    width: 100%;
+    padding-left: 120px;
+    padding-right: 30px;
+  }
+
+  .container.right {
+    left: 0%;
+  }
+
+  .container.left::after,
+  .container.right::after {
+    left: 82px;
+  }
+
+  .container.left::before,
+  .container.right::before {
+    left: 100px;
+    border-color: transparent black transparent transparent;
+  }
+
+  .container.left .date,
+  .container.right .date {
+    right: auto;
+    left: 25px;
+  }
+
+  .container.left .content,
+  .container.right .content {
+    padding: 30px;
+  }
+
+  .container.left .content {
+    margin-left: 40px;
+  }
+
+  .container.right .content {
+    margin-right: 40px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+  div.timeline::after {
+    left: 80px;
+  }
+
+  .container.left::after,
+  .container.right::after {
+    left: 72px;
+  }
+
+  .container.left .date,
+  .container.right .date {
+    left: 15px;
+  }
+
+  .container {
+    padding-left: 100px;
+    padding-right: 0px;
+  }
+
+  .container.left::before,
+  .container.right::before {
+    left: 80px;
+    border-color: transparent black transparent transparent;
+  }
+
+  .container.left .content,
+  .container.right .content {
+    padding: 10px;
+
+  }
+
+  .container.left .content {
+    margin-left: 40px;
+    margin-right: 10px;
+  }
+
+  .container.right .content {
+    margin-right: 40px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .intro {
+    font-size: 13px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .bottom-nav a {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 310px) {
+
+  .intro {
+    font-size: 13px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .intro h2 {
+    font-size: 15px;
+  }
+
+  div.timeline::after {
+    left: 50px;
+  }
+
+  .container.left::after,
+  .container.right::after {
+    left: 42px;
+  }
+
+  .container.left .date,
+  .container.right .date {
+    left: 5px;
+    font-size: 12px;
+  }
+
+  .container {
+    padding-left: 80px;
+    padding-right: 0px;
+  }
+
+  .container.left::before,
+  .container.right::before {
+    left: 60px;
+    border-color: transparent black transparent transparent;
+  }
+
+  .container.left .content,
+  .container.right .content {
+    padding: 10px;
+  }
+
+  .container.left .content {
+    margin-left: 40px;
+    margin-right: 10px;
+  }
+
+  .container.right .content {
+    margin-right: 10px;
+  }
+
+  .container .content p {
+    font-size: 12px;
+  }
+
+  button {
+    font-size: 10px;
+  }
+
+  .bottom-nav a {
+    padding: 5px;
+    font-size: 12px;
+  }
+
+}
+
+@media screen and (max-width: 250px) {
+
+  .intro {
+    font-size: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .intro h2 {
+    font-size: 13px;
+  }
+
+  div.timeline {
+    margin-top: 0px;
+  }
+
+  div.timeline::after {
+    display: none;
+  }
+
+  .container.left .date,
+  .container.right .date {
+    display: none;
+  }
+
+  .container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .container.left::before,
+  .container.right::before {
+    display: none;
+  }
+
+  .container.left::after,
+  .container.right::after {
+    display: none;
+  }
+
+  .container.left .content,
+  .container.right .content {
+    padding: 5px;
+  }
+
+  .container.left .content {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+
+  .container.right .content {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+
+  .container .content p {
+    font-size: 10px;
+  }
+
+  button {
+    font-size: 8px;
+    margin-top: 10px;
+  }
+
+}
+
+@media screen and (max-width: 150px) {
+
+  .intro {
+    font-size: 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+
+  .intro h2 {
+    font-size: 13px;
+  }
+
+}

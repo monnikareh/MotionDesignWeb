@@ -1,0 +1,134 @@
+@import url("style_general.css");
+
+.intro {
+    color: rgb(77, 77, 77);
+    margin: 100px 200px 60px 200px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.content {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+
+.content figure {
+    margin: 10px;
+    text-align: center;
+}
+
+/* Changes images separately */
+.opt {
+    padding-left: 20px;
+}
+
+.exp {
+    padding-left: 15px;
+}
+
+.content img {
+    transition:transform 0.25s ease;
+}
+
+.content img:hover {
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2);
+}
+
+.responsive {
+    width: 90%;
+    height: auto;
+}
+
+/* Responsive design */
+@media screen and (max-width: 800px) {
+    .intro {
+        margin: 120px 100px 30px 100px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .intro {
+        margin: 100px 100px 30px 100px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    section.intro {
+        margin: 100px 30px 30px 30px;
+    }   
+
+    .content {
+        display: block;
+    }
+
+    .responsive {
+        width: 60%;
+    }
+
+    .content figure.opt {
+        padding-left: 0px;
+    }
+    
+    .content figure.exp {
+        padding-left: 0px;
+    }
+    
+    .content figure.titles {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    
+    .content figure {
+        margin: 10px 0px 10px 0px;
+        width: auto;
+    }
+
+    .content img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .intro {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+
+    section.intro {
+        margin: 80px 10px 30px 10px;
+        right: 0px;
+        font-size: 14px;
+    }   
+}
+
+@media screen and (max-width: 210px) {
+    section.intro {
+        margin: 80px 10px 30px 10px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 150px) {
+    section.intro {
+        font-size: 6px;
+    }
+}
+
+@media screen and (min-height: 700px) {
+    .intro {
+        margin: 200px 80px 100px 80px;
+    }
+}
+

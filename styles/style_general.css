@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', 'Verdana', sans-serif;
+  background-color: white;
+}
+
+/* Changes header of the website */
+header {
+  padding: 10px 10px 23px 10px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  display: block;
+  background-color: white;
+}
+
+.home {
+  margin-top: 10px;
+  float: left;
+}
+
+/* Changes lines menu in the header */
+.linesMenu {
+  display: block;
+  cursor: pointer;
+  position: fixed;
+  right: 33px;
+}
+
+.line1,
+.line2,
+.line3 {
+  width: 30px;
+  height: 3px;
+  background-color: rgb(55, 51, 51);
+  margin: 8px 0px;
+}
+
+/* Changes dropdown menu */
+.dropdown {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.dropdown-content {
+  position: relative;
+  top: 15%;
+  width: 100%;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.dropdown a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.dropdown a:hover,
+.dropdown a:focus {
+  color: gray;
+}
+
+.dropdown .closeButton {
+  position: absolute;
+  padding-top: 0%;
+  margin-top: 0%;
+  font-size: 50px;
+  right: 25px;
+  background-color: white;
+}
+
+/* Responsive design */
+@media screen and (max-height: 450px) {
+  .dropdown {
+    overflow-y: auto;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  header {
+    padding: 5px 5px 10px 5px;
+  }
+
+  .home {
+    margin-top: 10px;
+  }
+
+  .line1,
+  .line2,
+  .line3 {
+    width: 28px;
+    height: 2px;
+    margin: 7px 0;
+  }
+
+  .horse {
+    margin-top: 20px;
+  }
+
+  .introduction h1 {
+    margin-top: 0px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+
+  .dropdown a {
+    font-size: 28px;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+
+  .line1,
+  .line2,
+  .line3 {
+    width: 28px;
+    height: 2px;
+  }
+
+  .dropdown a {
+    padding: 5px;
+    font-size: 25px;
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+
+  .home {
+    margin-top: 0px;
+  }
+
+  .linesMenu {
+    right: 20px;
+  }
+
+  .line1,
+  .line2,
+  .line3 {
+    width: 20px;
+    height: 2px;
+    margin: 5px 0px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+
+  .dropdown a {
+    padding: 3px;
+    font-size: 20px;
+  }
+
+}
+
+@media screen and (max-width: 250px) {
+
+  .linesMenu {
+    right: 15px;
+  }
+
+  .line1,
+  .line2,
+  .line3 {
+    width: 18px;
+    height: 2px;
+    background-color: rgb(55, 51, 51);
+    margin: 4px 0px;
+  }
+  .dropdown a {
+    font-size: 18px
+  }
+
+  .dropdown .closeButton {
+    font-size: 40px;
+    right: 10px;
+  }
+}
+
+@media screen and (max-width: 200px) {
+
+  .linesMenu {
+    right: 15px;
+  }
+
+  .line1,
+  .line2,
+  .line3 {
+    width: 15px;
+    height: 2px;
+    background-color: rgb(55, 51, 51);
+    margin: 3px 0px;
+  }
+  .dropdown a {
+    font-size: 15px
+  }
+}
+
+@media screen and (max-width: 150px) {
+
+  .linesMenu {
+    right: 10px;
+  }
+
+  .line1,
+  .line2,
+  .line3 {
+    width: 12px;
+    height: 2px;
+    background-color: rgb(55, 51, 51);
+    margin: 2px 0px;
+  }
+  .dropdown a {
+    font-size: 10px
+  }
+}
+
